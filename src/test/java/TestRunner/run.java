@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = ".//Features/LoginFeature.feature",
+        features = "src/test/resources/Features/LoginFeature.feature",
         glue = "StepDefination",
         dryRun = false,
         monochrome = true,

@@ -44,4 +44,7 @@ public loginPage(WebDriver rdriver){
     public void click_submit(){
         submit.click();
     }
+    public void closeBrowser(){
+        ldriver.quit();
+    }
 }

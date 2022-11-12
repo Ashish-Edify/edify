@@ -42,4 +42,7 @@ loginPage logpg;
     public void clickOnSubmit() {
         logpg.click_submit();
     }
+
+    @And("close browser")
+    public void closeBrowser() {logpg.closeBrowser();}
 }

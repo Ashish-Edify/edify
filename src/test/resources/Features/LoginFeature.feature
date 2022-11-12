@@ -4,3 +4,4 @@ Feature: Login
    Given User open chrome browser
    When user navigates to "https://www.udemy.com/"
    And click on login
+   And close browser
