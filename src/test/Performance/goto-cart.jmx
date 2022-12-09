@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="5.4.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="goto cart" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.amazon.in</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">completion.amazon.in</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">unagi.amazon.in</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <intProp name="HTTPSampler.concurrentPool">6</intProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/gp/cart/view.html?ref_=nav_cart" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ref_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ref_</stringProp>
+                  <stringProp name="Argument.value">nav_cart</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">gp/cart/view.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>0.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/cart/repurchase/1.0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">cart/repurchase/1.0</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-AUI-View" elementType="Header">
+                  <stringProp name="Header.name">X-AUI-View</stringProp>
+                  <stringProp name="Header.value">Desktop</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8;</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[2]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://completion.amazon.in/api/2017/suggestions" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/2017/suggestions</stringProp>
+            <stringProp name="HTTPSampler.method">HEAD</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[3]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/recommend/icart/cart-widget/ajax" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{
+  &quot;incentivizedCartServiceInput&quot; : &quot;%5B%7B%22asin%22%3A%22B0BDK62PDX%22%2C%22merchantID%22%3A%22A14CZOWI0VEHLG%22%2C%22offeringSKU%22%3A%22B0BDK62PDX%22%2C%22fulfillmentManagerID%22%3A%22A155QDYQ1VJ3YI%22%2C%22ourPrice%22%3A%7B%22code%22%3A%22INR%22%2C%22amount%22%3A78400.0%7D%2C%22quantity%22%3A1%2C%22isFBA%22%3Atrue%2C%22glProductGroup%22%3A%22gl_wireless%22%2C%22keyValuePairList%22%3A%7B%22addToCartTime%22%3A%221670232119%22%7D%7D%5D&quot;,
+  &quot;isPrimeCustomer&quot; : &quot;0&quot;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">recommend/icart/cart-widget/ajax</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-AUI-View" elementType="Header">
+                  <stringProp name="Header.name">X-AUI-View</stringProp>
+                  <stringProp name="Header.value">Desktop</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[4]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://unagi.amazon.in/1/events/com.amazon.csm.csa.prod" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;events&quot;:[{&quot;data&quot;:{&quot;renderedToMeaningful&quot;:384,&quot;renderedToViewed&quot;:384,&quot;renderedToImpressed&quot;:1418,&quot;schemaId&quot;:&quot;csa.PageImpressed.2&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.313Z&quot;,&quot;messageId&quot;:&quot;beyv6z-s632nr-fcwh6v-h3iqe9&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;meaningful&quot;:&quot;interactive&quot;,&quot;url&quot;:&quot;https://www.amazon.in/gp/cart/view.html?ref_=nav_cart&quot;,&quot;server&quot;:&quot;www.amazon.in&quot;,&quot;path&quot;:&quot;/gp/cart/view.html&quot;,&quot;referrer&quot;:&quot;https://www.amazon.in/Apple-iPhone-14-128GB-Blue/dp/B0BDK62PDX/ref=sr_1_1_sspa?crid=40QC21XMCK4D&amp;keywords=iphone+14&amp;qid=1670232090&amp;sprefix=iphone+14%2Caps%2C218&amp;sr=8-1-spons&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;psc=1&quot;,&quot;title&quot;:&quot;Amazon.in Shopping Cart&quot;,&quot;transitionType&quot;:&quot;hard&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;renderedToMeaningful&quot;:384,&quot;renderedToViewed&quot;:384,&quot;schemaId&quot;:&quot;csa.PageView.4&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.279Z&quot;,&quot;messageId&quot;:&quot;h8kdbf-nvce3a-dx4lh1-jghzyd&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;meaningful&quot;:&quot;interactive&quot;,&quot;url&quot;:&quot;https://www.amazon.in/gp/cart/view.html?ref_=nav_cart&quot;,&quot;server&quot;:&quot;www.amazon.in&quot;,&quot;path&quot;:&quot;/gp/cart/view.html&quot;,&quot;referrer&quot;:&quot;https://www.amazon.in/Apple-iPhone-14-128GB-Blue/dp/B0BDK62PDX/ref=sr_1_1_sspa?crid=40QC21XMCK4D&amp;keywords=iphone+14&amp;qid=1670232090&amp;sprefix=iphone+14%2Caps%2C218&amp;sr=8-1-spons&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;psc=1&quot;,&quot;title&quot;:&quot;Amazon.in Shopping Cart&quot;,&quot;transitionType&quot;:&quot;hard&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;schemaId&quot;:&quot;csa.PageEntity.1&quot;,&quot;version&quot;:2,&quot;attributes&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;meaningful&quot;:&quot;interactive&quot;,&quot;url&quot;:&quot;https://www.amazon.in/gp/cart/view.html?ref_=nav_cart&quot;,&quot;server&quot;:&quot;www.amazon.in&quot;,&quot;path&quot;:&quot;/gp/cart/view.html&quot;,&quot;referrer&quot;:&quot;https://www.amazon.in/Apple-iPhone-14-128GB-Blue/dp/B0BDK62PDX/ref=sr_1_1_sspa?crid=40QC21XMCK4D&amp;keywords=iphone+14&amp;qid=1670232090&amp;sprefix=iphone+14%2Caps%2C218&amp;sr=8-1-spons&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;psc=1&quot;,&quot;title&quot;:&quot;Amazon.in Shopping Cart&quot;,&quot;transitionType&quot;:&quot;hard&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;,&quot;pageTypeId&quot;:&quot;&quot;},&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.233Z&quot;,&quot;messageId&quot;:&quot;mzjcr1-l4zjv4-ixakj-hc2dwn&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;t8l2vt-pibc6a-hu2tb9-vb8pa&quot;,&quot;markers&quot;:{&quot;pageVisible&quot;:0,&quot;ue&quot;:367,&quot;bodyBegin&quot;:584,&quot;ns&quot;:587,&quot;ne&quot;:600,&quot;cb&quot;:766,&quot;x2&quot;:768,&quot;aboveTheFold&quot;:780,&quot;functional&quot;:781,&quot;x3&quot;:781,&quot;criticalFeature&quot;:781,&quot;bodyEnd&quot;:922,&quot;firstPaint&quot;:593,&quot;firstContentfulPaint&quot;:593,&quot;pc&quot;:5599,&quot;tc&quot;:0,&quot;na_&quot;:0,&quot;ul_&quot;:314,&quot;_ul&quot;:316,&quot;rd_&quot;:1980,&quot;_rd&quot;:1980,&quot;fe_&quot;:3,&quot;lk_&quot;:3,&quot;_lk&quot;:3,&quot;co_&quot;:3,&quot;_co&quot;:3,&quot;sc_&quot;:1980,&quot;rq_&quot;:9,&quot;rs_&quot;:303,&quot;_rs&quot;:901,&quot;dl_&quot;:323,&quot;di_&quot;:970,&quot;de_&quot;:970,&quot;_de&quot;:987,&quot;_dc&quot;:1978,&quot;ld_&quot;:1978,&quot;_ld&quot;:1980,&quot;ntd&quot;:365,&quot;ty&quot;:365,&quot;rc&quot;:365,&quot;hob&quot;:365,&quot;hoe&quot;:367,&quot;loaded&quot;:1978,&quot;navigationStart&quot;:0,&quot;unloadEventStart&quot;:314,&quot;unloadEventEnd&quot;:316,&quot;fetchStart&quot;:3,&quot;domainLookupStart&quot;:3,&quot;domainLookupEnd&quot;:3,&quot;connectStart&quot;:3,&quot;connectEnd&quot;:3,&quot;requestStart&quot;:9,&quot;responseStart&quot;:303,&quot;responseEnd&quot;:901,&quot;domLoading&quot;:323,&quot;domInteractive&quot;:970,&quot;domContentLoadedEventStart&quot;:970,&quot;domContentLoadedEventEnd&quot;:987,&quot;domComplete&quot;:1978,&quot;loadEventStart&quot;:1978,&quot;largestContentfulPaint&quot;:859,&quot;lcp&quot;:859,&quot;largestContentfulPaint.render&quot;:859,&quot;largestContentfulPaint.load&quot;:817,&quot;at&quot;:5599,&quot;visuallyLoaded10&quot;:598,&quot;visuallyLoaded20&quot;:598,&quot;visuallyLoaded30&quot;:767,&quot;visuallyLoaded40&quot;:768,&quot;visuallyLoaded50&quot;:780,&quot;vl50&quot;:780,&quot;visuallyLoaded60&quot;:782,&quot;visuallyLoaded70&quot;:782,&quot;visuallyLoaded80&quot;:794,&quot;visuallyLoaded90&quot;:987,&quot;vl90&quot;:987,&quot;visuallyLoaded100&quot;:1151,&quot;vl100&quot;:1151,&quot;speedIndex&quot;:770,&quot;si&quot;:770,&quot;visuallyLoaded0&quot;:0,&quot;atfSpeedIndex&quot;:770,&quot;atfsi&quot;:770,&quot;cumulativeLayoutShiftLastTimestamp&quot;:1995},&quot;markerTimestamps&quot;:{&quot;pageVisible&quot;:1670232191309,&quot;ue&quot;:1670232191676,&quot;bodyBegin&quot;:1670232191893,&quot;ns&quot;:1670232191896,&quot;ne&quot;:1670232191909,&quot;cb&quot;:1670232192075,&quot;x2&quot;:1670232192077,&quot;aboveTheFold&quot;:1670232192089,&quot;functional&quot;:1670232192090,&quot;x3&quot;:1670232192090,&quot;criticalFeature&quot;:1670232192090,&quot;bodyEnd&quot;:1670232192231,&quot;firstPaint&quot;:1670232191902,&quot;firstContentfulPaint&quot;:1670232191902,&quot;pc&quot;:1670232196908,&quot;tc&quot;:1670232191309,&quot;na_&quot;:1670232191309,&quot;ul_&quot;:1670232191623,&quot;_ul&quot;:1670232191625,&quot;rd_&quot;:1670232193289,&quot;_rd&quot;:1670232193289,&quot;fe_&quot;:1670232191312,&quot;lk_&quot;:1670232191312,&quot;_lk&quot;:1670232191312,&quot;co_&quot;:1670232191312,&quot;_co&quot;:1670232191312,&quot;sc_&quot;:1670232193289,&quot;rq_&quot;:1670232191318,&quot;rs_&quot;:1670232191612,&quot;_rs&quot;:1670232192210,&quot;dl_&quot;:1670232191632,&quot;di_&quot;:1670232192279,&quot;de_&quot;:1670232192279,&quot;_de&quot;:1670232192296,&quot;_dc&quot;:1670232193287,&quot;ld_&quot;:1670232193287,&quot;_ld&quot;:1670232193289,&quot;ntd&quot;:1670232191674,&quot;ty&quot;:1670232191674,&quot;rc&quot;:1670232191674,&quot;hob&quot;:1670232191674,&quot;hoe&quot;:1670232191676,&quot;loaded&quot;:1670232193287,&quot;navigationStart&quot;:1670232191309,&quot;unloadEventStart&quot;:1670232191623,&quot;unloadEventEnd&quot;:1670232191625,&quot;fetchStart&quot;:1670232191312,&quot;domainLookupStart&quot;:1670232191312,&quot;domainLookupEnd&quot;:1670232191312,&quot;connectStart&quot;:1670232191312,&quot;connectEnd&quot;:1670232191312,&quot;requestStart&quot;:1670232191318,&quot;responseStart&quot;:1670232191612,&quot;responseEnd&quot;:1670232192210,&quot;domLoading&quot;:1670232191632,&quot;domInteractive&quot;:1670232192279,&quot;domContentLoadedEventStart&quot;:1670232192279,&quot;domContentLoadedEventEnd&quot;:1670232192296,&quot;domComplete&quot;:1670232193287,&quot;loadEventStart&quot;:1670232193287,&quot;largestContentfulPaint&quot;:1670232192168,&quot;lcp&quot;:1670232192168,&quot;largestContentfulPaint.render&quot;:1670232192168,&quot;largestContentfulPaint.load&quot;:1670232192126,&quot;at&quot;:1670232196908,&quot;visuallyLoaded10&quot;:1670232191907,&quot;visuallyLoaded20&quot;:1670232191907,&quot;visuallyLoaded30&quot;:1670232192076,&quot;visuallyLoaded40&quot;:1670232192077,&quot;visuallyLoaded50&quot;:1670232192089,&quot;vl50&quot;:1670232192089,&quot;visuallyLoaded60&quot;:1670232192091,&quot;visuallyLoaded70&quot;:1670232192091,&quot;visuallyLoaded80&quot;:1670232192103,&quot;visuallyLoaded90&quot;:1670232192296,&quot;vl90&quot;:1670232192296,&quot;visuallyLoaded100&quot;:1670232192460,&quot;vl100&quot;:1670232192460,&quot;speedIndex&quot;:1670232192079,&quot;si&quot;:1670232192079,&quot;visuallyLoaded0&quot;:1670232191309,&quot;atfSpeedIndex&quot;:1670232192079,&quot;atfsi&quot;:1670232192079,&quot;cumulativeLayoutShiftLastTimestamp&quot;:1670232193304},&quot;navigationStartTimestamp&quot;:&quot;2022-12-05T09:23:11.309Z&quot;,&quot;schemaId&quot;:&quot;csa.PageLatency.5&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.234Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;y1xth1-dhjnn3-dg9l2s-g2qphp&quot;,&quot;schemaId&quot;:&quot;csa.Metric.3&quot;,&quot;metrics&quot;:{&quot;baselineMetricEvent&quot;:1},&quot;dimensions&quot;:{},&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.234Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;navigation&quot;:{&quot;type&quot;:&quot;normal&quot;,&quot;toTabId&quot;:&quot;dse2ro-t7tpp6-p8eby5-5dkkzl&quot;,&quot;toPageId&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;transitTime&quot;:78707,&quot;fromTabId&quot;:&quot;dse2ro-t7tpp6-p8eby5-5dkkzl&quot;,&quot;fromPageId&quot;:&quot;dse2ro-t7tpp6-p8eby5-5dkkzl&quot;,&quot;interactionId&quot;:&quot;o0mien-jvcbjq-pxie7c-urnyfr&quot;},&quot;schemaId&quot;:&quot;csa.TabbedBrowsing.2&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.235Z&quot;,&quot;messageId&quot;:&quot;9enw02-hpmiwy-jck6rs-1abrpe&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;kh9r2l-ldfwrj-uxhx62-w2e34t&quot;,&quot;schemaId&quot;:&quot;csa.ContentInteractionsSummary.1&quot;,&quot;w&quot;:{&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3486,&quot;it50&quot;:3554,&quot;it0&quot;:3639,&quot;sid&quot;:&quot;Navigation-desktop-navbar&quot;},&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3731,&quot;it50&quot;:4020,&quot;sid&quot;:&quot;sc-buy-box&quot;,&quot;it0&quot;:4939},&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;:{&quot;ttfv&quot;:689,&quot;sid&quot;:&quot;desktop-ptc-button&quot;,&quot;it0&quot;:4939,&quot;it50&quot;:4939,&quot;it100&quot;:4939},&quot;i42hbb-635feb-v9z1t-frlxut&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3731,&quot;sid&quot;:&quot;sc-active-cart&quot;,&quot;it0&quot;:4939,&quot;it50&quot;:4939},&quot;9jwd7c-kajmhc-6ovggr-upgebm&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3503,&quot;it50&quot;:3537,&quot;it0&quot;:3554,&quot;sid&quot;:&quot;nav-link-accountList&quot;,&quot;cid&quot;:&quot;nav_youraccount_btn&quot;},&quot;c0vav1-5c4xil-e2v5yk-sg2wkx&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;HamburgerMenuDesktop&quot;},&quot;kj6wn7-fk2alk-ui45rz-vgwh1k&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_0&quot;,&quot;cid&quot;:&quot;nav_cs_sell_T2&quot;},&quot;z25kg7-qt28ma-brgynd-ve2mpz&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_1&quot;,&quot;cid&quot;:&quot;nav_cs_fresh&quot;},&quot;zg48ju-w2cjd0-wlzifh-i6r2i8&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_2&quot;,&quot;cid&quot;:&quot;nav_avod_desktop_topnav&quot;},&quot;2vnyir-pgmwwx-am9p1s-jzn3pw&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_3&quot;,&quot;cid&quot;:&quot;nav_cs_apay&quot;},&quot;vzuofv-lawefk-lepn30-2nix9s&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_4&quot;,&quot;cid&quot;:&quot;nav_cs_gb&quot;},&quot;usg5lg-mun0r9-jwe31x-1ik84j&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_5&quot;,&quot;cid&quot;:&quot;nav_cs_bestsellers&quot;},&quot;rsmf3-w65wd2-3b2wad-jiejy6&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_6&quot;,&quot;cid&quot;:&quot;nav_cs_buy_again&quot;},&quot;pm6k7x-b0rpml-31qk10-u83khu&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_7&quot;,&quot;cid&quot;:&quot;nav_cs_mobiles&quot;},&quot;4thlap-qbc9ja-e7lkor-9m2c0x&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav-link-amazonprime&quot;,&quot;cid&quot;:&quot;nav_cs_primelink_nonmember&quot;},&quot;25awur-3njiog-4u5a2h-mf6iqu&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_9&quot;,&quot;cid&quot;:&quot;nav_cs_help&quot;},&quot;umg71b-vucgwq-bhxswl-20sam3&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_10&quot;,&quot;cid&quot;:&quot;nav_cs_gc&quot;},&quot;ksyw23-616ils-zgl2to-qvpe6p&quot;:{&quot;ttfv&quot;:689,&quot;it100&quot;:3575,&quot;it0&quot;:3607,&quot;it50&quot;:3587,&quot;sid&quot;:&quot;nav_cs_11&quot;,&quot;cid&quot;:&quot;nav_cs_electronics&quot;},&quot;ukowo2-we3wv-7027mf-fndigs&quot;:{&quot;ttfv&quot;:690,&quot;it100&quot;:4388,&quot;sid&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;cid&quot;:&quot;desktop-ptc-button-content-id&quot;,&quot;it0&quot;:4938,&quot;it50&quot;:4938},&quot;yj0w-o7pp68-l1hrd4-y1ju8d&quot;:{&quot;sid&quot;:&quot;cart-important-message-box&quot;},&quot;dxvztf-kh04fv-krh8gx-eoxbci&quot;:{&quot;sid&quot;:&quot;sc-saved-cart&quot;},&quot;841u7v-7nptgm-rmsogb-v9zbiq&quot;:{&quot;sid&quot;:&quot;cart-page-widgets-1&quot;,&quot;cid&quot;:&quot;amzn1.sym.1d0803db-15ce-4857-98a3-40c75b8661b4&quot;},&quot;dxsta9-hkrfus-5zdlbl-9s1zx1&quot;:{&quot;sid&quot;:&quot;cart-page-widgets-2&quot;,&quot;cid&quot;:&quot;amzn1.sym.0949b2b4-8a66-47ba-bda0-ae9d91a5af2b&quot;},&quot;g9zfii-tpqx7g-mogem7-nnyvhd&quot;:{&quot;sid&quot;:&quot;nav_cs_12&quot;,&quot;cid&quot;:&quot;nav_cs_newreleases&quot;},&quot;vh2c5y-edxpgx-p7p3ci-3rqzt5&quot;:{&quot;sid&quot;:&quot;nav_cs_13&quot;,&quot;cid&quot;:&quot;nav_cs_coupons&quot;},&quot;f1s1tq-nc70u-m16dx1-fe6p71&quot;:{&quot;sid&quot;:&quot;nav_cs_14&quot;,&quot;cid&quot;:&quot;nav_cs_home&quot;},&quot;5rwyee-frbxl4-x92jll-3qw322&quot;:{&quot;sid&quot;:&quot;nav_cs_15&quot;,&quot;cid&quot;:&quot;nav_cs_giftfinder&quot;},&quot;vs1cz3-9b2nno-455xa5-e0s1tn&quot;:{&quot;sid&quot;:&quot;nav_cs_16&quot;,&quot;cid&quot;:&quot;nav_cs_fashion&quot;},&quot;s26n9p-upbf5d-g5cq5h-lfm1fw&quot;:{&quot;sid&quot;:&quot;nav_cs_17&quot;,&quot;cid&quot;:&quot;nav_cs_hpc&quot;},&quot;rpm0nr-3bhy2f-po1ene-7d090d&quot;:{&quot;sid&quot;:&quot;nav_cs_18&quot;,&quot;cid&quot;:&quot;nav_cs_pc&quot;},&quot;u76d05-5df41j-qtaimb-ovij4k&quot;:{&quot;sid&quot;:&quot;nav_cs_19&quot;,&quot;cid&quot;:&quot;nav_cs_books&quot;},&quot;z96jxx-87x40b-m6td98-ebzj5x&quot;:{&quot;sid&quot;:&quot;nav_cs_20&quot;,&quot;cid&quot;:&quot;nav_cs_hi&quot;},&quot;xiyscq-ix4wta-543w6c-s6hpxz&quot;:{&quot;sid&quot;:&quot;nav_cs_21&quot;,&quot;cid&quot;:&quot;nav_cs_amazonbasics&quot;},&quot;k1lx1c-5lufsl-26p07e-gchm50&quot;:{&quot;sid&quot;:&quot;nav_cs_22&quot;,&quot;cid&quot;:&quot;nav_cs_baby&quot;},&quot;olxakt-s5v0nl-xgweq2-t4lez9&quot;:{&quot;sid&quot;:&quot;nav_cs_23&quot;,&quot;cid&quot;:&quot;nav_cs_sports&quot;},&quot;mpkl8c-vdzckx-3c728-2b7hte&quot;:{&quot;sid&quot;:&quot;nav_cs_24&quot;,&quot;cid&quot;:&quot;nav_cs_grocery&quot;},&quot;ids48b-oaiypo-pux6jx-y0dgyp&quot;:{&quot;sid&quot;:&quot;nav_cs_25&quot;,&quot;cid&quot;:&quot;nav_cs_toys&quot;},&quot;5wj44a-6lpo29-nmyzps-twkqzz&quot;:{&quot;sid&quot;:&quot;nav_cs_26&quot;,&quot;cid&quot;:&quot;nav_cs_sns&quot;},&quot;10p6yv-own59g-rdqs5l-s4g2n6&quot;:{&quot;sid&quot;:&quot;nav_cs_27&quot;,&quot;cid&quot;:&quot;nav_cs_beauty&quot;},&quot;3rtrzh-1fejtn-4bo4xd-aw6ul9&quot;:{&quot;sid&quot;:&quot;nav_cs_28&quot;,&quot;cid&quot;:&quot;nav_cs_video_games&quot;},&quot;5vrekk-srh8b7-1zvt9n-rrird4&quot;:{&quot;sid&quot;:&quot;nav_cs_29&quot;,&quot;cid&quot;:&quot;nav_cs_automotive&quot;},&quot;1opkng-cqb78i-wppl8d-2oao4l&quot;:{&quot;sid&quot;:&quot;nav_cs_30&quot;,&quot;cid&quot;:&quot;nav_cs_pets&quot;}},&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;network&quot;:{&quot;downlink&quot;:&quot;10&quot;,&quot;downlinkMax&quot;:&quot;null&quot;,&quot;rtt&quot;:&quot;0&quot;,&quot;type&quot;:&quot;null&quot;,&quot;effectiveType&quot;:&quot;4g&quot;,&quot;saveData&quot;:&quot;false&quot;},&quot;language&quot;:&quot;en-US&quot;,&quot;doNotTrack&quot;:null,&quot;hardwareConcurrency&quot;:8,&quot;deviceMemory&quot;:8,&quot;cookieEnabled&quot;:true,&quot;webdriver&quot;:false,&quot;schemaId&quot;:&quot;csa.Navigator.4&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.236Z&quot;,&quot;messageId&quot;:&quot;f42d4e-wuod54-ns0mju-n08zc4&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;w975ll-j6oc3-smcnh6-je7zy1&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;,&quot;class&quot;:&quot;nav-sprite-v1 celwidget nav-bluebeacon nav-a11y-t1 bold-focus-hover layout2 nav-flex layout3 layout3-alt nav-packard-glow hamburger nav-progressive-attribute&quot;,&quot;slotId&quot;:&quot;Navigation-desktop-navbar&quot;,&quot;legacyId&quot;:&quot;Navigation-desktop-navbar&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1081,&quot;pageFirstPaintToElementImpressed&quot;:2006,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.315Z&quot;,&quot;messageId&quot;:&quot;eici0e-6102t5-9i5jih-wbfki0&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;,&quot;class&quot;:&quot;nav-sprite-v1 celwidget nav-bluebeacon nav-a11y-t1 bold-focus-hover layout2 nav-flex layout3 layout3-alt nav-packard-glow hamburger nav-progressive-attribute&quot;,&quot;slotId&quot;:&quot;Navigation-desktop-navbar&quot;,&quot;legacyId&quot;:&quot;Navigation-desktop-navbar&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;wgsbb9-j91ojb-mmmvut-gkl38j&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;,&quot;class&quot;:&quot;a-cardui sc-card-style sc-java-remote-feature celwidget sc-card-spacing-top-none&quot;,&quot;slotId&quot;:&quot;sc-buy-box&quot;,&quot;legacyId&quot;:&quot;sc-buy-box&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1081,&quot;pageFirstPaintToElementImpressed&quot;:2006,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.315Z&quot;,&quot;messageId&quot;:&quot;2d2fnp-gjujn2-hjl0rb-1u73lw&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;,&quot;class&quot;:&quot;a-cardui sc-card-style sc-java-remote-feature celwidget sc-card-spacing-top-none&quot;,&quot;slotId&quot;:&quot;sc-buy-box&quot;,&quot;legacyId&quot;:&quot;sc-buy-box&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;g24q9u-7rmbau-ri37nh-cyd5ta&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;,&quot;class&quot;:&quot;celwidget&quot;,&quot;slotId&quot;:&quot;desktop-ptc-button&quot;,&quot;legacyId&quot;:&quot;desktop-ptc-button&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1081,&quot;pageFirstPaintToElementImpressed&quot;:2006,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.315Z&quot;,&quot;messageId&quot;:&quot;wng4gh-kflbfp-qmiszd-mwv4ae&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;,&quot;class&quot;:&quot;celwidget&quot;,&quot;slotId&quot;:&quot;desktop-ptc-button&quot;,&quot;legacyId&quot;:&quot;desktop-ptc-button&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;hajhjt-z2krhi-dref4s-q90nh8&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;,&quot;class&quot;:&quot;a-cardui sc-card-style sc-list sc-java-remote-feature celwidget sc-card-spacing-top-none&quot;,&quot;slotId&quot;:&quot;sc-active-cart&quot;,&quot;legacyId&quot;:&quot;sc-active-cart&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;v7y0xs-rzb9t8-cwlth3-k4zpjb&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;,&quot;class&quot;:&quot;a-cardui sc-card-style sc-list sc-java-remote-feature celwidget sc-card-spacing-top-none&quot;,&quot;slotId&quot;:&quot;sc-active-cart&quot;,&quot;legacyId&quot;:&quot;sc-active-cart&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentRender.2&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.234Z&quot;,&quot;width&quot;:0,&quot;height&quot;:0,&quot;positionX&quot;:0,&quot;positionY&quot;:0,&quot;messageId&quot;:&quot;j7xano-e3xa30-77cul8-357v40&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;841u7v-7nptgm-rmsogb-v9zbiq&quot;,&quot;contentId&quot;:&quot;amzn1.sym.1d0803db-15ce-4857-98a3-40c75b8661b4&quot;,&quot;slotId&quot;:&quot;cart-page-widgets-1&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;painter&quot;:&quot;PersonalizationCartRecommendationsDesktopList&quot;,&quot;iSlotId&quot;:&quot;cart-page-widgets-1&quot;,&quot;class&quot;:&quot;celwidget pd_rd_w-Vn1Ka content-id-amzn1.sym.1d0803db-15ce-4857-98a3-40c75b8661b4 pf_rd_p-1d0803db-15ce-4857-98a3-40c75b8661b4 pf_rd_r-1JT0MTWSF2NM3XW97BZ5 pd_rd_wg-aYP7b pd_rd_r-3a5b5efc-e073-457c-9320-e241c822c4cc&quot;,&quot;legacyId&quot;:&quot;cart-page-widgets_StreamUCAGccp-cart-purchase-cart-checkout-scf&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentRender.2&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.234Z&quot;,&quot;width&quot;:1461,&quot;height&quot;:490,&quot;positionX&quot;:29,&quot;positionY&quot;:758,&quot;messageId&quot;:&quot;f4f6fc-g951xq-3898nl-q1lgdj&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;dxsta9-hkrfus-5zdlbl-9s1zx1&quot;,&quot;contentId&quot;:&quot;amzn1.sym.0949b2b4-8a66-47ba-bda0-ae9d91a5af2b&quot;,&quot;slotId&quot;:&quot;cart-page-widgets-2&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;painter&quot;:&quot;PersonalizationCartRecommendationsDesktopCarousel&quot;,&quot;iSlotId&quot;:&quot;cart-page-widgets-2&quot;,&quot;class&quot;:&quot;celwidget pd_rd_w-CFJxn content-id-amzn1.sym.0949b2b4-8a66-47ba-bda0-ae9d91a5af2b pf_rd_p-0949b2b4-8a66-47ba-bda0-ae9d91a5af2b pf_rd_r-1JT0MTWSF2NM3XW97BZ5 pd_rd_wg-aYP7b pd_rd_r-3a5b5efc-e073-457c-9320-e241c822c4cc&quot;,&quot;legacyId&quot;:&quot;cart-page-widgets_StreamUCAGccp-cart-session-mrai-checkout-scf&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;xspdum-ua55kf-mya3qt-wrrul0&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;9jwd7c-kajmhc-6ovggr-upgebm&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav-link-accountList&quot;,&quot;contentId&quot;:&quot;nav_youraccount_btn&quot;,&quot;iSlotId&quot;:&quot;nav-link-accountList&quot;,&quot;href&quot;:&quot;https://www.amazon.in/gp/css/homepage.html?ref_=nav_youraccount_btn&quot;,&quot;class&quot;:&quot;nav-a nav-a-2 nav-truncate   nav-progressive-attribute&quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;lefc2a-ih6wwe-10o161-odrq5p&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;9jwd7c-kajmhc-6ovggr-upgebm&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav-link-accountList&quot;,&quot;contentId&quot;:&quot;nav_youraccount_btn&quot;,&quot;iSlotId&quot;:&quot;nav-link-accountList&quot;,&quot;href&quot;:&quot;https://www.amazon.in/gp/css/homepage.html?ref_=nav_youraccount_btn&quot;,&quot;class&quot;:&quot;nav-a nav-a-2 nav-truncate   nav-progressive-attribute&quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;tqttoi-bpsqfn-qfv518-im09sk&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;c0vav1-5c4xil-e2v5yk-sg2wkx&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;slotId&quot;:&quot;HamburgerMenuDesktop&quot;,&quot;interactionEvents&quot;:&quot;click&quot;,&quot;iSlotId&quot;:&quot;HamburgerMenuDesktop&quot;,&quot;href&quot;:&quot;javascript: void(0)&quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;mpjfc4-kcn13c-1y85kx-m0tszh&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;c0vav1-5c4xil-e2v5yk-sg2wkx&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;slotId&quot;:&quot;HamburgerMenuDesktop&quot;,&quot;interactionEvents&quot;:&quot;click&quot;,&quot;iSlotId&quot;:&quot;HamburgerMenuDesktop&quot;,&quot;href&quot;:&quot;javascript: void(0)&quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;3ivqt2-b8mbbs-qre99z-t162m8&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;kj6wn7-fk2alk-ui45rz-vgwh1k&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_0&quot;,&quot;contentId&quot;:&quot;nav_cs_sell_T2&quot;,&quot;iSlotId&quot;:&quot;nav_cs_0&quot;,&quot;href&quot;:&quot;/b/32702030031?node=32702030031&amp;ld=AZINSOANavDesktop_T2&amp;ref_=nav_cs_sell_T2&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;dtx2tp-8v53si-2aitl8-obqpvj&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;kj6wn7-fk2alk-ui45rz-vgwh1k&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_0&quot;,&quot;contentId&quot;:&quot;nav_cs_sell_T2&quot;,&quot;iSlotId&quot;:&quot;nav_cs_0&quot;,&quot;href&quot;:&quot;/b/32702030031?node=32702030031&amp;ld=AZINSOANavDesktop_T2&amp;ref_=nav_cs_sell_T2&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;5zkady-ohunz-aph57g-6u6um2&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;z25kg7-qt28ma-brgynd-ve2mpz&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_1&quot;,&quot;contentId&quot;:&quot;nav_cs_fresh&quot;,&quot;iSlotId&quot;:&quot;nav_cs_1&quot;,&quot;href&quot;:&quot;/fresh?ref_=nav_cs_fresh&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;bq0jbt-gm9q1g-xh19ec-s14g98&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;z25kg7-qt28ma-brgynd-ve2mpz&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_1&quot;,&quot;contentId&quot;:&quot;nav_cs_fresh&quot;,&quot;iSlotId&quot;:&quot;nav_cs_1&quot;,&quot;href&quot;:&quot;/fresh?ref_=nav_cs_fresh&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;90jibo-jd3i81-a4gdj9-tteqcq&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;zg48ju-w2cjd0-wlzifh-i6r2i8&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_2&quot;,&quot;contentId&quot;:&quot;nav_avod_desktop_topnav&quot;,&quot;iSlotId&quot;:&quot;nav_cs_2&quot;,&quot;href&quot;:&quot;/minitv?ref_=nav_avod_desktop_topnav&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;6sx9c-aokv4s-j636ex-cymxyd&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;zg48ju-w2cjd0-wlzifh-i6r2i8&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_2&quot;,&quot;contentId&quot;:&quot;nav_avod_desktop_topnav&quot;,&quot;iSlotId&quot;:&quot;nav_cs_2&quot;,&quot;href&quot;:&quot;/minitv?ref_=nav_avod_desktop_topnav&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;j4r1we-b0fau3-cwz4bf-m4vkb3&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;2vnyir-pgmwwx-am9p1s-jzn3pw&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_3&quot;,&quot;contentId&quot;:&quot;nav_cs_apay&quot;,&quot;iSlotId&quot;:&quot;nav_cs_3&quot;,&quot;href&quot;:&quot;/gp/sva/dashboard?ref_=nav_cs_apay&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;s45uk9-59mws0-6zo3l0-seqfja&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;2vnyir-pgmwwx-am9p1s-jzn3pw&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_3&quot;,&quot;contentId&quot;:&quot;nav_cs_apay&quot;,&quot;iSlotId&quot;:&quot;nav_cs_3&quot;,&quot;href&quot;:&quot;/gp/sva/dashboard?ref_=nav_cs_apay&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;h79u9z-48q9ij-whzq8e-mc6svf&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;vzuofv-lawefk-lepn30-2nix9s&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_4&quot;,&quot;contentId&quot;:&quot;nav_cs_gb&quot;,&quot;iSlotId&quot;:&quot;nav_cs_4&quot;,&quot;href&quot;:&quot;/deals?ref_=nav_cs_gb&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;8w4q9i-gv2gey-64h6on-c8zitr&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;vzuofv-lawefk-lepn30-2nix9s&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_4&quot;,&quot;contentId&quot;:&quot;nav_cs_gb&quot;,&quot;iSlotId&quot;:&quot;nav_cs_4&quot;,&quot;href&quot;:&quot;/deals?ref_=nav_cs_gb&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;mfe9fa-kufpyz-lke5hx-kvuwkj&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;usg5lg-mun0r9-jwe31x-1ik84j&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_5&quot;,&quot;contentId&quot;:&quot;nav_cs_bestsellers&quot;,&quot;iSlotId&quot;:&quot;nav_cs_5&quot;,&quot;href&quot;:&quot;/gp/bestsellers/?ref_=nav_cs_bestsellers&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;lyvaw-tdyuv2-5l9jb5-hvcpl0&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;usg5lg-mun0r9-jwe31x-1ik84j&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_5&quot;,&quot;contentId&quot;:&quot;nav_cs_bestsellers&quot;,&quot;iSlotId&quot;:&quot;nav_cs_5&quot;,&quot;href&quot;:&quot;/gp/bestsellers/?ref_=nav_cs_bestsellers&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;ceyhhp-hf9c4l-el3zxv-alt06&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;rsmf3-w65wd2-3b2wad-jiejy6&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_6&quot;,&quot;contentId&quot;:&quot;nav_cs_buy_again&quot;,&quot;iSlotId&quot;:&quot;nav_cs_6&quot;,&quot;href&quot;:&quot;/gp/buyagain?ie=UTF8&amp;ref_=nav_cs_buy_again&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;jq9hju-3jvtlj-uy4gqg-sfpq8c&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;rsmf3-w65wd2-3b2wad-jiejy6&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_6&quot;,&quot;contentId&quot;:&quot;nav_cs_buy_again&quot;,&quot;iSlotId&quot;:&quot;nav_cs_6&quot;,&quot;href&quot;:&quot;/gp/buyagain?ie=UTF8&amp;ref_=nav_cs_buy_again&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;9znnml-poku9-xjucsi-iqyvlh&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;pm6k7x-b0rpml-31qk10-u83khu&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_7&quot;,&quot;contentId&quot;:&quot;nav_cs_mobiles&quot;,&quot;iSlotId&quot;:&quot;nav_cs_7&quot;,&quot;href&quot;:&quot;/mobile-phones/b/?ie=UTF8&amp;node=1389401031&amp;ref_=nav_cs_mobiles&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;ibrmry-uelmft-q1ye3q-4xbhvp&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;pm6k7x-b0rpml-31qk10-u83khu&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_7&quot;,&quot;contentId&quot;:&quot;nav_cs_mobiles&quot;,&quot;iSlotId&quot;:&quot;nav_cs_7&quot;,&quot;href&quot;:&quot;/mobile-phones/b/?ie=UTF8&amp;node=1389401031&amp;ref_=nav_cs_mobiles&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;lxhyiu-75iqgh-tu7yik-pywotb&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;4thlap-qbc9ja-e7lkor-9m2c0x&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav-link-amazonprime&quot;,&quot;contentId&quot;:&quot;nav_cs_primelink_nonmember&quot;,&quot;iSlotId&quot;:&quot;nav-link-amazonprime&quot;,&quot;href&quot;:&quot;/prime?ref_=nav_cs_primelink_nonmember&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;xqicte-s00ewv-gujryd-955b75&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;4thlap-qbc9ja-e7lkor-9m2c0x&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav-link-amazonprime&quot;,&quot;contentId&quot;:&quot;nav_cs_primelink_nonmember&quot;,&quot;iSlotId&quot;:&quot;nav-link-amazonprime&quot;,&quot;href&quot;:&quot;/prime?ref_=nav_cs_primelink_nonmember&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;ac6171-4ncwto-pf0y9-ta8d8q&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;25awur-3njiog-4u5a2h-mf6iqu&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_9&quot;,&quot;contentId&quot;:&quot;nav_cs_help&quot;,&quot;iSlotId&quot;:&quot;nav_cs_9&quot;,&quot;href&quot;:&quot;/gp/help/customer/display.html?nodeId=200507590&amp;ref_=nav_cs_help&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;2nsbay-7amuq3-611nv2-9efc85&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;25awur-3njiog-4u5a2h-mf6iqu&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_9&quot;,&quot;contentId&quot;:&quot;nav_cs_help&quot;,&quot;iSlotId&quot;:&quot;nav_cs_9&quot;,&quot;href&quot;:&quot;/gp/help/customer/display.html?nodeId=200507590&amp;ref_=nav_cs_help&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;gtnr4h-1hghjj-s0qhtl-99fiip&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;umg71b-vucgwq-bhxswl-20sam3&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_10&quot;,&quot;contentId&quot;:&quot;nav_cs_gc&quot;,&quot;iSlotId&quot;:&quot;nav_cs_10&quot;,&quot;href&quot;:&quot;/gift-card-store/b/?ie=UTF8&amp;node=3704982031&amp;ref_=nav_cs_gc&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;ibqccu-iuq5vk-b53qz9-9vxf1s&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;umg71b-vucgwq-bhxswl-20sam3&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_10&quot;,&quot;contentId&quot;:&quot;nav_cs_gc&quot;,&quot;iSlotId&quot;:&quot;nav_cs_10&quot;,&quot;href&quot;:&quot;/gift-card-store/b/?ie=UTF8&amp;node=3704982031&amp;ref_=nav_cs_gc&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:67,&quot;pageFirstPaintToElementViewed&quot;:992,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.301Z&quot;,&quot;messageId&quot;:&quot;javrtn-o5nqn1-y17xzl-49sgjg&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ksyw23-616ils-zgl2to-qvpe6p&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_11&quot;,&quot;contentId&quot;:&quot;nav_cs_electronics&quot;,&quot;iSlotId&quot;:&quot;nav_cs_11&quot;,&quot;href&quot;:&quot;/electronics/b/?ie=UTF8&amp;node=976419031&amp;ref_=nav_cs_electronics&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;mt02mp-pmkq9t-j3jgj0-omv9l&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ksyw23-616ils-zgl2to-qvpe6p&quot;,&quot;type&quot;:&quot;link&quot;,&quot;slotId&quot;:&quot;nav_cs_11&quot;,&quot;contentId&quot;:&quot;nav_cs_electronics&quot;,&quot;iSlotId&quot;:&quot;nav_cs_11&quot;,&quot;href&quot;:&quot;/electronics/b/?ie=UTF8&amp;node=976419031&amp;ref_=nav_cs_electronics&quot;,&quot;class&quot;:&quot;nav-a  &quot;,&quot;parentId&quot;:&quot;bl402y-ug1evl-sx0j3b-f5ys&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;s1nyzs-ncrous-avftil-kuupv6&quot;,&quot;schemaId&quot;:&quot;csa.ContentLatency.1&quot;,&quot;markers&quot;:{&quot;functional:click&quot;:970,&quot;visuallyLoaded50&quot;:5608,&quot;visuallyLoaded90&quot;:5608},&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.279Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ukowo2-we3wv-7027mf-fndigs&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;slotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;contentId&quot;:&quot;desktop-ptc-button-content-id&quot;,&quot;iSlotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;class&quot;:&quot;a-button a-button-normal a-button-span12 a-button-primary&quot;,&quot;parentId&quot;:&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;6yjrcw-kg0hif-et662e-1ocu0n&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;96dy9o-o6u9dq-5s0t2y-ek0flc&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-buy-box-gift-checkbox-update&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;rjwrz5-zc86cz-vlsyzp-mheji8&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ukowo2-we3wv-7027mf-fndigs&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;slotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;contentId&quot;:&quot;desktop-ptc-button-content-id&quot;,&quot;iSlotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;class&quot;:&quot;a-button a-button-normal a-button-span12 a-button-primary&quot;,&quot;parentId&quot;:&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;w9hs99-r0eq6-je8uw7-pwj9rp&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;96dy9o-o6u9dq-5s0t2y-ek0flc&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-buy-box-gift-checkbox-update&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;45nkfi-d5z309-aqurqr-qecs43&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ukowo2-we3wv-7027mf-fndigs&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;slotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;contentId&quot;:&quot;desktop-ptc-button-content-id&quot;,&quot;iSlotId&quot;:&quot;desktop-ptc-button-slot-id&quot;,&quot;class&quot;:&quot;a-button a-button-normal a-button-span12 a-button-primary&quot;,&quot;parentId&quot;:&quot;2io7t8-2gj2sw-7tzsg3-lu6ies&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;v6n02b-oe82kw-lp59ny-6zq9z5&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;tgswvc-p7gw6o-rv8g9i-j6rcay&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-expander-toggle&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;href&quot;:&quot;javascript:void(0)&quot;,&quot;class&quot;:&quot;a-expander-header a-declarative a-expander-section-header a-link-section-expander a-size-medium&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;10ex5k-bnmrha-pw1h5h-wwjxtx&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;1d1z90-wlcbdi-eae4xz-bqmkh5&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-dropdown-button&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;class&quot;:&quot;a-button-text a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;6r2uu2-4s64n3-bswx4o-76yn9i&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ml4ec0-e2vazw-i4mipy-vi2k1m&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-item-action&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;p24gmn-fojlrs-h2ata9-qq024t&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;99kfrw-mzaps4-vl785g-w7zxrj&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-item-action&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;jjo7cm-xgl8oy-hnt3ic-lyyiun&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;5mbba4-30g65m-810irq-uxoyry&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-modal&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;4hfj28-4knbds-2yahnw-6817fs&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;hsq92-jhku36-vsu0yy-vgrj3p&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-saved-cart-caption&quot;,&quot;class&quot;:&quot;a-declarative&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:1082,&quot;pageFirstPaintToElementImpressed&quot;:2007,&quot;timestamp&quot;:&quot;2022-12-05T09:23:13.316Z&quot;,&quot;messageId&quot;:&quot;7yqy9u-b0monu-bm13vg-4l4wqq&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;9h2ugu-iet1cx-p4ybnv-92600h&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-buy-it-again-caption&quot;,&quot;class&quot;:&quot;a-declarative&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;t3s3to-ppo4ln-gxrht9-uwa5sz&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;tgswvc-p7gw6o-rv8g9i-j6rcay&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-expander-toggle&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;href&quot;:&quot;javascript:void(0)&quot;,&quot;class&quot;:&quot;a-expander-header a-declarative a-expander-section-header a-link-section-expander a-size-medium&quot;,&quot;parentId&quot;:&quot;les1ko-mzz31w-kji8x7-xqjhdw&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;p8fd2m-avbffe-2no5ig-uvaav7&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;1d1z90-wlcbdi-eae4xz-bqmkh5&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-dropdown-button&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;class&quot;:&quot;a-button-text a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;vyvk8b-9fvam4-qxlnc1-wcqhlc&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;ml4ec0-e2vazw-i4mipy-vi2k1m&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-item-action&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;hwmq1j-862bov-tjhi0e-wzi6ez&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;99kfrw-mzaps4-vl785g-w7zxrj&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-item-action&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;lw957q-srnozk-j9fuhz-iy68jy&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;5mbba4-30g65m-810irq-uxoyry&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-a-modal&quot;,&quot;class&quot;:&quot;a-declarative&quot;,&quot;parentId&quot;:&quot;i42hbb-635feb-v9z1t-frlxut&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;cyyeg2-sweqkn-f25xwh-37b3h2&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;hsq92-jhku36-vsu0yy-vgrj3p&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-saved-cart-caption&quot;,&quot;class&quot;:&quot;a-declarative&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:68,&quot;pageFirstPaintToElementViewed&quot;:993,&quot;timestamp&quot;:&quot;2022-12-05T09:23:12.302Z&quot;,&quot;messageId&quot;:&quot;s2vn7x-7ww8wt-e63re2-xuccb6&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;9h2ugu-iet1cx-p4ybnv-92600h&quot;,&quot;type&quot;:&quot;widget&quot;,&quot;funcDeps&quot;:&quot;aui-da-sc-buy-it-again-caption&quot;,&quot;class&quot;:&quot;a-declarative&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;ibmwy9-r4d482-6ictqw-ez91u0&quot;,&quot;schemaId&quot;:&quot;csa.InternalCounters.2&quot;,&quot;c&quot;:{&quot;postbackImageSize&quot;:{&quot;f&quot;:190,&quot;s&quot;:2495,&quot;l&quot;:204,&quot;c&quot;:10},&quot;Nav:Xshop:Impression:nav_avod_desktop_topnav&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_apay&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_gb&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_bestsellers&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_buy_again&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_mobiles&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_primelink_nonmember&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_help&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_gc&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_electronics&quot;:{&quot;f&quot;:1},&quot;nav-flyout-prime-attach-latency&quot;:{&quot;f&quot;:342},&quot;nav-flyout-amazonprime-attach-latency&quot;:{&quot;f&quot;:345},&quot;nav-flyout-accountList-attach-latency&quot;:{&quot;f&quot;:347},&quot;nav-flyout-amazonfresh-attach-latency&quot;:{&quot;f&quot;:348},&quot;nav-flyout-groceries-attach-latency&quot;:{&quot;f&quot;:349},&quot;nav-flyout-transientFlyout-attach-latency&quot;:{&quot;f&quot;:349},&quot;nav-flyout-abAcquisition-attach-latency&quot;:{&quot;f&quot;:349},&quot;nav-flyout-abActivation-attach-latency&quot;:{&quot;f&quot;:349},&quot;nav-flyout-abAccountLink-attach-latency&quot;:{&quot;f&quot;:351},&quot;nav-flyout-abCatAcquisition-attach-latency&quot;:{&quot;f&quot;:351},&quot;nav-flyout-abCatActivation-attach-latency&quot;:{&quot;f&quot;:352},&quot;nav-flyout-abCatAccountLink-attach-latency&quot;:{&quot;f&quot;:352},&quot;XSS_CVE_ajaxPrefilter&quot;:{&quot;f&quot;:1},&quot;baselineCounter2&quot;:{&quot;f&quot;:1},&quot;nexusBaselineCounter&quot;:{&quot;f&quot;:1},&quot;CSMLibrarySize&quot;:{&quot;f&quot;:9739,&quot;s&quot;:90068,&quot;l&quot;:62921,&quot;c&quot;:4},&quot;aui:hiResDesktop&quot;:{&quot;f&quot;:0},&quot;aui:pagejs:pkgExecTime&quot;:{&quot;f&quot;:1.9000000059604645},&quot;aui:sw:sw_message_no_ctrl&quot;:{&quot;f&quot;:1,&quot;s&quot;:4,&quot;l&quot;:1,&quot;c&quot;:4},&quot;csm.cookieSize&quot;:{&quot;f&quot;:555},&quot;aui:sw:ppft:error:no_ctrl&quot;:{&quot;f&quot;:1},&quot;aui:resource_count&quot;:{&quot;f&quot;:1,&quot;s&quot;:66,&quot;l&quot;:11,&quot;c&quot;:11},&quot;BuyItAgain:Request:ForceLoad&quot;:{&quot;f&quot;:1},&quot;BuyItAgain:Request:Load&quot;:{&quot;f&quot;:1},&quot;NavJS:CSM:Latency:PreloadSprite:desktop&quot;:{&quot;f&quot;:222},&quot;totalImages&quot;:{&quot;f&quot;:19},&quot;Event:csm.CSMBaselineEvent.4&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_sell_T2&quot;:{&quot;f&quot;:1},&quot;Nav:Xshop:Impression:nav_cs_fresh&quot;:{&quot;f&quot;:1},&quot;actionsInFlightReducer:failedToMatchActionType&quot;:{&quot;f&quot;:1,&quot;s&quot;:3,&quot;l&quot;:1,&quot;c&quot;:3},&quot;cartReducer:failedToMatchActionType&quot;:{&quot;f&quot;:1,&quot;s&quot;:3,&quot;l&quot;:1,&quot;c&quot;:3},&quot;nonOptimisticActionReducer:failedToMatchActionType&quot;:{&quot;f&quot;:1,&quot;s&quot;:3,&quot;l&quot;:1,&quot;c&quot;:3},&quot;actionsInFlightReducer:checkoutReducer:failedToMatchActionType&quot;:{&quot;f&quot;:1},&quot;nav-flyout-timeline-attach-latency&quot;:{&quot;f&quot;:450},&quot;aui:preload_asks&quot;:{&quot;f&quot;:1,&quot;s&quot;:55,&quot;l&quot;:10,&quot;c&quot;:10},&quot;SocialShareFramework..Render&quot;:{&quot;f&quot;:1,&quot;s&quot;:3,&quot;l&quot;:2,&quot;c&quot;:2},&quot;SocialShareFramework.DPX.Desktop.ImageBlockRender&quot;:{&quot;f&quot;:1},&quot;SocialShareFramework.DPX.Desktop.Render&quot;:{&quot;f&quot;:1},&quot;p13n:logger:attempt&quot;:{&quot;f&quot;:1},&quot;HeadLatency:desktop&quot;:{&quot;f&quot;:185},&quot;Cart:LazyLoadWidget:incentivizedCartView:Success:Count&quot;:{&quot;f&quot;:1},&quot;NavJS:TimeUpTo:ATF:desktop&quot;:{&quot;f&quot;:55},&quot;NavJS:TimeUpTo:CF:desktop&quot;:{&quot;f&quot;:55},&quot;NavJS:TimeUpTo:PageLoaded:desktop&quot;:{&quot;f&quot;:56},&quot;NavJS:TotalCallCount:PageLoaded:desktop&quot;:{&quot;f&quot;:993},&quot;Nav:CSM:Latency:network:D:desktop&quot;:{&quot;f&quot;:300},&quot;Nav:CSM:Latency:navFirstPaint:D:desktop&quot;:{&quot;f&quot;:284},&quot;Nav:CSM:Latency:NavStart:C:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:NavFirstPaintStart:D:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:NavFirstPaintStart:C:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:NavMainStart:D:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:NavMainStart:C:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:PreNav:D:desktop&quot;:{&quot;f&quot;:0},&quot;Nav:CSM:Latency:PreNav:C:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:UpNav:D:desktop&quot;:{&quot;f&quot;:0},&quot;Nav:CSM:Latency:UpNav:C:desktop&quot;:{&quot;f&quot;:222},&quot;Nav:CSM:Latency:Logo:D:desktop&quot;:{&quot;f&quot;:0},&quot;Nav:CSM:Latency:Logo:C:desktop&quot;:{&quot;f&quot;:223},&quot;Nav:CSM:Latency:Search:D:desktop&quot;:{&quot;f&quot;:6},&quot;Nav:CSM:Latency:Search:C:desktop&quot;:{&quot;f&quot;:229},&quot;Nav:CSM:Latency:Tools:D:desktop&quot;:{&quot;f&quot;:4},&quot;Nav:CSM:Latency:Tools:C:desktop&quot;:{&quot;f&quot;:233},&quot;Nav:CSM:Latency:HamburgerMenuIcon:D:desktop&quot;:{&quot;f&quot;:0},&quot;Nav:CSM:Latency:HamburgerMenuIcon:C:desktop&quot;:{&quot;f&quot;:233},&quot;Nav:CSM:Latency:CrossShop:D:desktop&quot;:{&quot;f&quot;:0},&quot;Nav:CSM:Latency:CrossShop:C:desktop&quot;:{&quot;f&quot;:233},&quot;Nav:CSM:Latency:SWM:D:desktop&quot;:{&quot;f&quot;:1},&quot;Nav:CSM:Latency:SWM:C:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavBar:D:desktop&quot;:{&quot;f&quot;:12},&quot;Nav:CSM:Latency:NavBar:C:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavMainPaintEnd:D:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavMainPaintEnd:C:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavFirstPaintEnd:D:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavFirstPaintEnd:C:desktop&quot;:{&quot;f&quot;:234},&quot;Nav:CSM:Latency:NavMainEnd:D:desktop&quot;:{&quot;f&quot;:235},&quot;Nav:CSM:Latency:NavMainEnd:C:desktop&quot;:{&quot;f&quot;:235},&quot;nav-flyout-icp-attach-latency&quot;:{&quot;f&quot;:1402},&quot;nav-flyout-icp-footer-flyout-attach-latency&quot;:{&quot;f&quot;:1403},&quot;Event:a9_tq.FraudMetrics.3&quot;:{&quot;f&quot;:1},&quot;resource-timing-assets-requests&quot;:{&quot;f&quot;:22},&quot;resource-timing-assets-requests-uncached&quot;:{&quot;f&quot;:21},&quot;resource-timing-assets-total-duration&quot;:{&quot;f&quot;:557.1999999880791},&quot;resource-timing-assets-max-duration&quot;:{&quot;f&quot;:49.70000001788139},&quot;resource-timing-assets-total-transferred&quot;:{&quot;f&quot;:382.8095703125},&quot;resource-timing-assets-max-transferred&quot;:{&quot;f&quot;:116.04296875},&quot;resource-timing-assets-long-pull&quot;:{&quot;f&quot;:2014.699999988079},&quot;resource-timing-assets-requests-cached&quot;:{&quot;f&quot;:1},&quot;resource-timing-assets-cache-hit-rate&quot;:{&quot;f&quot;:4.545454545454546},&quot;resource-timing-assets-cache-hit-rate-bucket&quot;:{&quot;f&quot;:10},&quot;resource-timing-images-requests&quot;:{&quot;f&quot;:5},&quot;resource-timing-images-requests-uncached&quot;:{&quot;f&quot;:5},&quot;resource-timing-images-total-duration&quot;:{&quot;f&quot;:194.79999995231628},&quot;resource-timing-images-max-duration&quot;:{&quot;f&quot;:75.59999999403954},&quot;resource-timing-images-total-transferred&quot;:{&quot;f&quot;:48.12890625},&quot;resource-timing-images-max-transferred&quot;:{&quot;f&quot;:19.4091796875},&quot;resource-timing-images-long-pull&quot;:{&quot;f&quot;:882.2999999821186},&quot;resource-timing-images-cache-hit-rate&quot;:{&quot;f&quot;:0},&quot;resource-timing-images-cache-hit-rate-bucket&quot;:{&quot;f&quot;:0},&quot;resource-timing-product-images-requests&quot;:{&quot;f&quot;:38},&quot;resource-timing-product-images-requests-uncached&quot;:{&quot;f&quot;:33},&quot;resource-timing-product-images-total-duration&quot;:{&quot;f&quot;:1065.200000077486},&quot;resource-timing-product-images-max-duration&quot;:{&quot;f&quot;:78.40000000596046},&quot;resource-timing-product-images-total-transferred&quot;:{&quot;f&quot;:157.611328125},&quot;resource-timing-product-images-max-transferred&quot;:{&quot;f&quot;:13.0068359375},&quot;resource-timing-product-images-long-pull&quot;:{&quot;f&quot;:1283.699999988079},&quot;resource-timing-product-images-requests-cached&quot;:{&quot;f&quot;:5},&quot;resource-timing-product-images-cache-hit-rate&quot;:{&quot;f&quot;:13.157894736842104},&quot;resource-timing-product-images-cache-hit-rate-bucket&quot;:{&quot;f&quot;:20},&quot;resource-timing-unknown-requests&quot;:{&quot;f&quot;:7},&quot;resource-timing-unknown-requests-uncached&quot;:{&quot;f&quot;:7},&quot;resource-timing-unknown-total-duration&quot;:{&quot;f&quot;:1694.0000000298023},&quot;resource-timing-unknown-max-duration&quot;:{&quot;f&quot;:646.9000000059605},&quot;resource-timing-unknown-total-transferred&quot;:{&quot;f&quot;:53.255859375},&quot;resource-timing-unknown-max-transferred&quot;:{&quot;f&quot;:49.3984375},&quot;resource-timing-unknown-long-pull&quot;:{&quot;f&quot;:2014.4000000059605},&quot;resource-timing-unknown-cache-hit-rate&quot;:{&quot;f&quot;:0},&quot;resource-timing-unknown-cache-hit-rate-bucket&quot;:{&quot;f&quot;:0},&quot;aui:sw:browser:register:success&quot;:{&quot;f&quot;:1},&quot;aui:preload_fulfilled&quot;:{&quot;f&quot;:1,&quot;s&quot;:55,&quot;l&quot;:10,&quot;c&quot;:10},&quot;Event:csm.CrossOriginDomains.2&quot;:{&quot;f&quot;:1}},&quot;timestamp&quot;:&quot;2022-12-05T09:23:16.917Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;ue8j31-p7s7wc-penr51-fkjo9a&quot;,&quot;markers&quot;:{&quot;functional:aui-da-a-button-group:click&quot;:877,&quot;functional:aui-da-sc-lazy-load-retry-action:click&quot;:998,&quot;functional:aui-da-open-related-items-modal:click&quot;:1016,&quot;functional:aui-da-modal-delete-related-items:click&quot;:1016,&quot;functional:aui-da-pantry-interstitial-carousel-atc:click&quot;:1017,&quot;functional:aui-da-sc-add-to-cart-action:click&quot;:1043,&quot;functional:aui-da-sc-expand-saved-for-later:click&quot;:1070,&quot;functional:aui-da-sc-item-action:click&quot;:1115,&quot;functional:aui-da-move-to-default-list:click&quot;:1071,&quot;functional:aui-da-comparison-in-cart-atc-action:click&quot;:1071,&quot;functional:aui-da-a-psx-atc:click&quot;:1071,&quot;functional:aui-da-unified-promotion-with-recommendations-modal-action:click&quot;:1071,&quot;functional:aui-da-unified-promotion-with-recommendations-modal-atc:click&quot;:1071,&quot;functional:aui-da-dibs-bottom-sheet:click&quot;:1115,&quot;functional:aui-da-dibs-bottom-sheet-close:click&quot;:1114,&quot;functional:aui-da-d12n-expand-ambig:click&quot;:1114,&quot;functional:aui-da-d12n-play-audio:click&quot;:1115,&quot;functional:aui-da-qs-widget-button-decl:click&quot;:1115,&quot;functional:aui-da-qs-widget-text-input-updatelink-decl:click&quot;:1115,&quot;functional:aui-da-localmarket-item-action:click&quot;:1115,&quot;functional:aui-da-fresh-item-action:click&quot;:1115,&quot;functional:aui-da-alexa-bundle-remove-all-link:click&quot;:1115,&quot;functional:aui-da-a-modal:click&quot;:889,&quot;functional:aui-da-localmarket-dibs-bottom-sheet:click&quot;:1115,&quot;functional:aui-da-dcx-navigation:click&quot;:1115,&quot;functional:aui-da-utterance-feedback-thumbs-up-click:click&quot;:1118,&quot;functional:aui-da-utterance-feedback-thumbs-down-click:click&quot;:1118,&quot;functional:aui-da-utterance-feedback-link-click:click&quot;:1118,&quot;functional:aui-da-dibs-item-action:click&quot;:1118,&quot;functional:aui-da-dibs-dp-link:click&quot;:1115,&quot;functional:aui-da-dibs-search:click&quot;:1115,&quot;functional:aui-da-dibs-query-search-button-click:click&quot;:1118,&quot;functional:aui-da-localmarket-dibs-item-action:click&quot;:1116,&quot;functional:aui-da-dibs-conflict-box-cancel:click&quot;:1118,&quot;functional:aui-da-dibs-conflict-resolve:click&quot;:1118,&quot;functional:aui-da-dibs-feedback-submit-button-click:click&quot;:1118,&quot;functional:aui-da-dibs-feedback-cancel-button-click:click&quot;:1118,&quot;functional:aui-da-dibs-accordion-asr-click:click&quot;:1118,&quot;functional:aui-da-dibs-accordion-intent-click:click&quot;:1118,&quot;functional:aui-da-dibs-accordion-alexa-heard-wrong-item-click:click&quot;:1118,&quot;functional:aui-da-dibs-accordion-nvp-click:click&quot;:1118,&quot;functional:aui-da-dibs-accordion-other-click:click&quot;:1118,&quot;functional:aui-da-mashov-opt-in-link-click:click&quot;:1118,&quot;functional:aui-da-ssf-share-icon:click&quot;:1122,&quot;functional:aui-da-qs-add-to-cart-trigger:click&quot;:1123,&quot;functional:aui-da-qs-slider-widget-trigger:click&quot;:1123,&quot;functional:aui-da-a-tabs:click&quot;:889,&quot;functional:aui-da-a-switch-label:click&quot;:878,&quot;functional:aui-da-a-popover-floating-close:click&quot;:878,&quot;functional:aui-da-sc-buy-box-gift-checkbox-update:click&quot;:883,&quot;functional:aui-da-a-accordion:click&quot;:884,&quot;functional:aui-da-a-expander-toggle:click&quot;:884,&quot;functional:aui-da-al-sheet-with-fallback:click&quot;:884,&quot;functional:aui-da-cart-sfl-add-item-to-list:click&quot;:884,&quot;functional:aui-da-awl-create-list-bottomsheet:click&quot;:886,&quot;functional:aui-da-create-list-bottomsheet-submit:click&quot;:886,&quot;functional:aui-da-create-new-order-ultra-fast-grocery-action:click&quot;:886,&quot;functional:aui-da-sc-saved-cart-caption:click&quot;:886,&quot;functional:aui-da-sc-buy-it-again-caption:click&quot;:887,&quot;functional:aui-da-a-popover-close:click&quot;:889,&quot;functional:aui-da-a-popover:click&quot;:889,&quot;functional:aui-da-a-tooltip:click&quot;:889,&quot;functional:aui-da-a-splitdropdown-button:click&quot;:889,&quot;functional:aui-da-a-splitdropdown-main:click&quot;:889,&quot;functional:aui-da-add-to-list-popover:click&quot;:890,&quot;functional:aui-da-cldd-show-more-lists:click&quot;:890,&quot;functional:aui-da-sc-click-popover:click&quot;:890,&quot;functional:aui-da-a-dropdown-button:click&quot;:890,&quot;functional:aui-da-create-list-submit:click&quot;:890,&quot;functional:aui-da-sns-popover-close:click&quot;:890,&quot;functional:aui-da-sns-subscribe-selected:click&quot;:890,&quot;functional:aui-da-sns-unsubscribe-confirm-selected:click&quot;:890,&quot;functional:aui-da-p13n-sc-atl:click&quot;:918},&quot;markerTimestamps&quot;:{&quot;functional:aui-da-a-button-group:click&quot;:1670232192186,&quot;functional:aui-da-sc-lazy-load-retry-action:click&quot;:1670232192307,&quot;functional:aui-da-open-related-items-modal:click&quot;:1670232192325,&quot;functional:aui-da-modal-delete-related-items:click&quot;:1670232192325,&quot;functional:aui-da-pantry-interstitial-carousel-atc:click&quot;:1670232192326,&quot;functional:aui-da-sc-add-to-cart-action:click&quot;:1670232192352,&quot;functional:aui-da-sc-expand-saved-for-later:click&quot;:1670232192379,&quot;functional:aui-da-sc-item-action:click&quot;:1670232192424,&quot;functional:aui-da-move-to-default-list:click&quot;:1670232192380,&quot;functional:aui-da-comparison-in-cart-atc-action:click&quot;:1670232192380,&quot;functional:aui-da-a-psx-atc:click&quot;:1670232192380,&quot;functional:aui-da-unified-promotion-with-recommendations-modal-action:click&quot;:1670232192380,&quot;functional:aui-da-unified-promotion-with-recommendations-modal-atc:click&quot;:1670232192380,&quot;functional:aui-da-dibs-bottom-sheet:click&quot;:1670232192424,&quot;functional:aui-da-dibs-bottom-sheet-close:click&quot;:1670232192423,&quot;functional:aui-da-d12n-expand-ambig:click&quot;:1670232192423,&quot;functional:aui-da-d12n-play-audio:click&quot;:1670232192424,&quot;functional:aui-da-qs-widget-button-decl:click&quot;:1670232192424,&quot;functional:aui-da-qs-widget-text-input-updatelink-decl:click&quot;:1670232192424,&quot;functional:aui-da-localmarket-item-action:click&quot;:1670232192424,&quot;functional:aui-da-fresh-item-action:click&quot;:1670232192424,&quot;functional:aui-da-alexa-bundle-remove-all-link:click&quot;:1670232192424,&quot;functional:aui-da-a-modal:click&quot;:1670232192198,&quot;functional:aui-da-localmarket-dibs-bottom-sheet:click&quot;:1670232192424,&quot;functional:aui-da-dcx-navigation:click&quot;:1670232192424,&quot;functional:aui-da-utterance-feedback-thumbs-up-click:click&quot;:1670232192427,&quot;functional:aui-da-utterance-feedback-thumbs-down-click:click&quot;:1670232192427,&quot;functional:aui-da-utterance-feedback-link-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-item-action:click&quot;:1670232192427,&quot;functional:aui-da-dibs-dp-link:click&quot;:1670232192424,&quot;functional:aui-da-dibs-search:click&quot;:1670232192424,&quot;functional:aui-da-dibs-query-search-button-click:click&quot;:1670232192427,&quot;functional:aui-da-localmarket-dibs-item-action:click&quot;:1670232192425,&quot;functional:aui-da-dibs-conflict-box-cancel:click&quot;:1670232192427,&quot;functional:aui-da-dibs-conflict-resolve:click&quot;:1670232192427,&quot;functional:aui-da-dibs-feedback-submit-button-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-feedback-cancel-button-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-accordion-asr-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-accordion-intent-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-accordion-alexa-heard-wrong-item-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-accordion-nvp-click:click&quot;:1670232192427,&quot;functional:aui-da-dibs-accordion-other-click:click&quot;:1670232192427,&quot;functional:aui-da-mashov-opt-in-link-click:click&quot;:1670232192427,&quot;functional:aui-da-ssf-share-icon:click&quot;:1670232192431,&quot;functional:aui-da-qs-add-to-cart-trigger:click&quot;:1670232192432,&quot;functional:aui-da-qs-slider-widget-trigger:click&quot;:1670232192432,&quot;functional:aui-da-a-tabs:click&quot;:1670232192198,&quot;functional:aui-da-a-switch-label:click&quot;:1670232192187,&quot;functional:aui-da-a-popover-floating-close:click&quot;:1670232192187,&quot;functional:aui-da-sc-buy-box-gift-checkbox-update:click&quot;:1670232192192,&quot;functional:aui-da-a-accordion:click&quot;:1670232192193,&quot;functional:aui-da-a-expander-toggle:click&quot;:1670232192193,&quot;functional:aui-da-al-sheet-with-fallback:click&quot;:1670232192193,&quot;functional:aui-da-cart-sfl-add-item-to-list:click&quot;:1670232192193,&quot;functional:aui-da-awl-create-list-bottomsheet:click&quot;:1670232192195,&quot;functional:aui-da-create-list-bottomsheet-submit:click&quot;:1670232192195,&quot;functional:aui-da-create-new-order-ultra-fast-grocery-action:click&quot;:1670232192195,&quot;functional:aui-da-sc-saved-cart-caption:click&quot;:1670232192195,&quot;functional:aui-da-sc-buy-it-again-caption:click&quot;:1670232192196,&quot;functional:aui-da-a-popover-close:click&quot;:1670232192198,&quot;functional:aui-da-a-popover:click&quot;:1670232192198,&quot;functional:aui-da-a-tooltip:click&quot;:1670232192198,&quot;functional:aui-da-a-splitdropdown-button:click&quot;:1670232192198,&quot;functional:aui-da-a-splitdropdown-main:click&quot;:1670232192198,&quot;functional:aui-da-add-to-list-popover:click&quot;:1670232192199,&quot;functional:aui-da-cldd-show-more-lists:click&quot;:1670232192199,&quot;functional:aui-da-sc-click-popover:click&quot;:1670232192199,&quot;functional:aui-da-a-dropdown-button:click&quot;:1670232192199,&quot;functional:aui-da-create-list-submit:click&quot;:1670232192199,&quot;functional:aui-da-sns-popover-close:click&quot;:1670232192199,&quot;functional:aui-da-sns-subscribe-selected:click&quot;:1670232192199,&quot;functional:aui-da-sns-unsubscribe-confirm-selected:click&quot;:1670232192199,&quot;functional:aui-da-p13n-sc-atl:click&quot;:1670232192227},&quot;navigationStartTimestamp&quot;:&quot;2022-12-05T09:23:11.309Z&quot;,&quot;schemaId&quot;:&quot;csa.InteractionFailuresDependencies.1&quot;,&quot;timestamp&quot;:&quot;2022-12-05T09:23:16.919Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentView.3&quot;,&quot;timeToViewed&quot;:4936,&quot;pageFirstPaintToElementViewed&quot;:5861,&quot;timestamp&quot;:&quot;2022-12-05T09:23:17.170Z&quot;,&quot;messageId&quot;:&quot;ri84qo-hbbyks-n7afx9-1lehwx&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;yj0w-o7pp68-l1hrd4-y1ju8d&quot;,&quot;class&quot;:&quot;a-section a-spacing-none sc-java-remote-feature celwidget&quot;,&quot;slotId&quot;:&quot;cart-important-message-box&quot;,&quot;legacyId&quot;:&quot;cart-important-message-box&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;schemaId&quot;:&quot;csa.ContentImpressed.2&quot;,&quot;timeToImpressed&quot;:5947,&quot;pageFirstPaintToElementImpressed&quot;:6872,&quot;timestamp&quot;:&quot;2022-12-05T09:23:18.181Z&quot;,&quot;messageId&quot;:&quot;gharl3-kxfuh-l76n13-9r6o87&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;},&quot;element&quot;:{&quot;id&quot;:&quot;yj0w-o7pp68-l1hrd4-y1ju8d&quot;,&quot;class&quot;:&quot;a-section a-spacing-none sc-java-remote-feature celwidget&quot;,&quot;slotId&quot;:&quot;cart-important-message-box&quot;,&quot;legacyId&quot;:&quot;cart-important-message-box&quot;,&quot;type&quot;:&quot;widget&quot;}}}},{&quot;data&quot;:{&quot;messageId&quot;:&quot;u3leyt-5v5jkd-vpgkq1-s1kyrg&quot;,&quot;schemaId&quot;:&quot;csa.Metric.3&quot;,&quot;metrics&quot;:{&quot;documentCumulativeLayoutShift&quot;:0.010167969411027829},&quot;dimensions&quot;:{},&quot;timestamp&quot;:&quot;2022-12-05T09:23:18.315Z&quot;,&quot;application&quot;:&quot;Retail:Prod:www.amazon.in&quot;,&quot;obfuscatedMarketplaceId&quot;:&quot;A21TJRUUN4KGV&quot;,&quot;producerId&quot;:&quot;csa&quot;,&quot;entities&quot;:{&quot;page&quot;:{&quot;id&quot;:&quot;e9nwh5-efsnoa-hd41hp-zcdzx1&quot;,&quot;requestId&quot;:&quot;1JT0MTWSF2NM3XW97BZ5&quot;,&quot;pageType&quot;:&quot;ShoppingCart&quot;,&quot;subPageType&quot;:&quot;Cart&quot;},&quot;session&quot;:{&quot;id&quot;:&quot;262-3378145-5054824&quot;}}}}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">1/events/com.amazon.csm.csa.prod</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[5]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/gp/cart/desktop/go-to-checkout.html/ref=ox_sc_proceed?partialCheckoutCart=1&amp;isToBeGiftWrappedBefore=0&amp;proceedToRetailCheckout=Proceed+to+checkout&amp;proceedToCheckout=1&amp;cartInitiateId=1670232192190" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="proceedToRetailCheckout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">proceedToRetailCheckout</stringProp>
+                  <stringProp name="Argument.value">Proceed to checkout</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="partialCheckoutCart" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">partialCheckoutCart</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="proceedToCheckout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">proceedToCheckout</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="isToBeGiftWrappedBefore" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">isToBeGiftWrappedBefore</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="cartInitiateId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cartInitiateId</stringProp>
+                  <stringProp name="Argument.value">1670232192190</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">gp/cart/desktop/go-to-checkout.html/ref=ox_sc_proceed</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[6]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>15522.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">7761</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 15522 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/a/addresses/ajax/widgets" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;operation&quot;:&quot;IndiaAutopopulation&quot;,&quot;data&quot;:{&quot;address-ui-widgets-enterAddressPostalCode&quot;:&quot;600001&quot;},&quot;ajaxToken&quot;:&quot;eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiQTI1NktXIn0.HOK2S4tJnw5ZJUVvBQ2we7fZS5GLCm0-pLc517LBpOp2kin_QZFDyw.KE1seFPFDTrB_bXH.kqr2s4OAchRB7qCuRCwd7PyxdbpNJk1eSDTGtCOQuBARnkixzLZKzM6YcAjegMU5lwJ5O3R7CXR3ulLV9zeooF2S8ALJRj40gc0EGP5A1BbFxuvfApc4fZAkigklo8H5KrhN4r8pWMNNYRoE2HHPCQZJW-QQqOiKFNXrRAW_UJ8XD-WrA_ak_gHsgb6siW0Mi9Z_sjUEY5wpsnfwWxmzMpaGdrI7tYiiNdgKgLutbK1Pb27RS4jifuXCBa-p4HuBjkBCyiwwqk81VFNzwMXKuWTITEBDonud0bvMB_C9te2oCdW7ZVHjoVicZG7C2Mt4LYYsgIlsHzJOV5CRtf-7jmSKUWYLDEmfJD6vvqsVEa76vZ_41H8g7kEhWyVwnHG-K_fNkSk_ZXMGY1w3Zrj02EJEjxKJancq0rFszWC9s7ANsLbcTJ7c-IXt5kX42sRHYCme312U1dwHaKxpxS0fJ5gquqanx8bJoP9opPOiKYgoX7bNvLkq7yzjbSVFHeK0IXZrqv9a3i0agI7gJijOU28NSLZv8pIdc9MQDWE8-XZQgIFv5_vekKIh2U8EqUnwGSC-rWg4s6fXmexGcphlP2fSnkl-Whx4zHHphBgzeln8iwKpxw1rLWwbXxlxQwrGmSn7zm8Ni0JIedZjyyqHOlYu69JgR2DRpO00J1MhXuvzhi0Cm0f9zoe1xgJXRFbNW0sDb16RdEQ1OoASjP6VM70jHohkDjzWE1-mIEAZYBGlzlO-pAyYvXTgD7oP6LI2t1MYpNWB8gp4zWblygihjI50y3yQUhRfshwxfnObnMqBaMxx45ZfmS-IasSXwmdLvzxjwDMkLUHmFAIv9_llc15LPFqvkN58kDdE5wqAv10e9wOz7TWHhVS6WdWzKZ3D4Yx7uJPQJPaJqaTE4HWlL3bN8h44HHfybryv8nRkVGPnW8RHilINdNSyvIc9x9LXzRyyy-oHiVcIZM2PShkMybVYKitcN1sGV7F9O2Rq04JespjJQ4U7KYH3HoBKKB6UC7L_qXICINTbr7F7sL1nsPQw3uBWS_kZ0hkBP1iuUzu96KZ6PwFi4_BiW3YCT9KvwNXDjcNyAT2o7ItaHqusGTxwkPIquLEBKiYCTDc_MlxtNtmMkQev1fVV9riFckL8qDShUmf2AV8a24n5gVXm71OehMG70ed5Isq1WG4slEUq7ohchbIhEGmR8gr777w-w0kVuz8AvUS8k9ZUzDaye9AB2_EbGhRfm6RTPQWaLLFUkQdCGG_2arNPURkZR8IJ1Q4z5WVMrzN3vF4.2CTKPhPPyPjD1snIO22rhg&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">a/addresses/ajax/widgets</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[7]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/a/addresses/ajax/widgets" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;operation&quot;:&quot;IndiaAutopopulation&quot;,&quot;data&quot;:{&quot;address-ui-widgets-enterAddressPostalCode&quot;:&quot;600001&quot;},&quot;ajaxToken&quot;:&quot;eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiQTI1NktXIn0.HOK2S4tJnw5ZJUVvBQ2we7fZS5GLCm0-pLc517LBpOp2kin_QZFDyw.KE1seFPFDTrB_bXH.kqr2s4OAchRB7qCuRCwd7PyxdbpNJk1eSDTGtCOQuBARnkixzLZKzM6YcAjegMU5lwJ5O3R7CXR3ulLV9zeooF2S8ALJRj40gc0EGP5A1BbFxuvfApc4fZAkigklo8H5KrhN4r8pWMNNYRoE2HHPCQZJW-QQqOiKFNXrRAW_UJ8XD-WrA_ak_gHsgb6siW0Mi9Z_sjUEY5wpsnfwWxmzMpaGdrI7tYiiNdgKgLutbK1Pb27RS4jifuXCBa-p4HuBjkBCyiwwqk81VFNzwMXKuWTITEBDonud0bvMB_C9te2oCdW7ZVHjoVicZG7C2Mt4LYYsgIlsHzJOV5CRtf-7jmSKUWYLDEmfJD6vvqsVEa76vZ_41H8g7kEhWyVwnHG-K_fNkSk_ZXMGY1w3Zrj02EJEjxKJancq0rFszWC9s7ANsLbcTJ7c-IXt5kX42sRHYCme312U1dwHaKxpxS0fJ5gquqanx8bJoP9opPOiKYgoX7bNvLkq7yzjbSVFHeK0IXZrqv9a3i0agI7gJijOU28NSLZv8pIdc9MQDWE8-XZQgIFv5_vekKIh2U8EqUnwGSC-rWg4s6fXmexGcphlP2fSnkl-Whx4zHHphBgzeln8iwKpxw1rLWwbXxlxQwrGmSn7zm8Ni0JIedZjyyqHOlYu69JgR2DRpO00J1MhXuvzhi0Cm0f9zoe1xgJXRFbNW0sDb16RdEQ1OoASjP6VM70jHohkDjzWE1-mIEAZYBGlzlO-pAyYvXTgD7oP6LI2t1MYpNWB8gp4zWblygihjI50y3yQUhRfshwxfnObnMqBaMxx45ZfmS-IasSXwmdLvzxjwDMkLUHmFAIv9_llc15LPFqvkN58kDdE5wqAv10e9wOz7TWHhVS6WdWzKZ3D4Yx7uJPQJPaJqaTE4HWlL3bN8h44HHfybryv8nRkVGPnW8RHilINdNSyvIc9x9LXzRyyy-oHiVcIZM2PShkMybVYKitcN1sGV7F9O2Rq04JespjJQ4U7KYH3HoBKKB6UC7L_qXICINTbr7F7sL1nsPQw3uBWS_kZ0hkBP1iuUzu96KZ6PwFi4_BiW3YCT9KvwNXDjcNyAT2o7ItaHqusGTxwkPIquLEBKiYCTDc_MlxtNtmMkQev1fVV9riFckL8qDShUmf2AV8a24n5gVXm71OehMG70ed5Isq1WG4slEUq7ohchbIhEGmR8gr777w-w0kVuz8AvUS8k9ZUzDaye9AB2_EbGhRfm6RTPQWaLLFUkQdCGG_2arNPURkZR8IJ1Q4z5WVMrzN3vF4.2CTKPhPPyPjD1snIO22rhg&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">a/addresses/ajax/widgets</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[8]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/gp/help/customer/display.html?ie=UTF8&amp;nodeId=200522700&amp;ref_=ox_spc_privacy#" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ref_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ref_</stringProp>
+                  <stringProp name="Argument.value">ox_spc_privacy</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ie" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ie</stringProp>
+                  <stringProp name="Argument.value">UTF8</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="nodeId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">nodeId</stringProp>
+                  <stringProp name="Argument.value">200522700</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">gp/help/customer/display.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[9]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>11427.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">5713.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 11427 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/cart/ewc/compact?hostPageType=GPHelp&amp;hostSubPageType=null&amp;hostPageRID=967SF5PYP5GVJV5F7A2T&amp;prerender=0&amp;freshCartCount=0&amp;almCartCount=0&amp;primeWardrobeCartCount=0&amp;widerCompactView=true&amp;_=1670232219094" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="widerCompactView" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">widerCompactView</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="almCartCount" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">almCartCount</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="freshCartCount" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">freshCartCount</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="hostSubPageType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">hostSubPageType</stringProp>
+                  <stringProp name="Argument.value">null</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="hostPageType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">hostPageType</stringProp>
+                  <stringProp name="Argument.value">GPHelp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="primeWardrobeCartCount" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">primeWardrobeCartCount</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="hostPageRID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">hostPageRID</stringProp>
+                  <stringProp name="Argument.value">967SF5PYP5GVJV5F7A2T</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="prerender" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">prerender</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">_</stringProp>
+                  <stringProp name="Argument.value">1670232219094</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">cart/ewc/compact</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[10]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://completion.amazon.in/api/2017/suggestions" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/2017/suggestions</stringProp>
+            <stringProp name="HTTPSampler.method">HEAD</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[11]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/gp/cart/view.html?ref_=nav_cart" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ref_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ref_</stringProp>
+                  <stringProp name="Argument.value">nav_cart</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">gp/cart/view.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1229</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[12]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>10459.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">5229.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 10459 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/cart/repurchase/1.0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">cart/repurchase/1.0</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-AUI-View" elementType="Header">
+                  <stringProp name="Header.name">X-AUI-View</stringProp>
+                  <stringProp name="Header.value">Desktop</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8;</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[13]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://completion.amazon.in/api/2017/suggestions" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/2017/suggestions</stringProp>
+            <stringProp name="HTTPSampler.method">HEAD</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[14]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.in/recommend/icart/cart-widget/ajax" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{
+  &quot;incentivizedCartServiceInput&quot; : &quot;%5B%7B%22asin%22%3A%22B0BDK62PDX%22%2C%22merchantID%22%3A%22A14CZOWI0VEHLG%22%2C%22offeringSKU%22%3A%22B0BDK62PDX%22%2C%22fulfillmentManagerID%22%3A%22A155QDYQ1VJ3YI%22%2C%22ourPrice%22%3A%7B%22code%22%3A%22INR%22%2C%22amount%22%3A78400.0%7D%2C%22quantity%22%3A1%2C%22isFBA%22%3Atrue%2C%22glProductGroup%22%3A%22gl_wireless%22%2C%22keyValuePairList%22%3A%7B%22addToCartTime%22%3A%221670232119%22%7D%7D%5D&quot;,
+  &quot;isPrimeCustomer&quot; : &quot;0&quot;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">recommend/icart/cart-widget/ajax</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-AUI-View" elementType="Header">
+                  <stringProp name="Header.name">X-AUI-View</stringProp>
+                  <stringProp name="Header.value">Desktop</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;10.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1536</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1.25</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[15]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
